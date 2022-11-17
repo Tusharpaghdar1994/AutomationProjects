@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="172059" started-at="2022-11-14T19:54:23 IST" finished-at="2022-11-14T19:57:15 IST">
+    <groups>
+    </groups>
+    <test name="ChromeTestRunner" duration-ms="55648" started-at="2022-11-14T19:54:23 IST" finished-at="2022-11-14T19:55:19 IST">
+      <class name="testNgpack.ActiTimeLogin">
+        <test-method status="PASS" signature="loginToActiTime(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testNgpack.ActiTimeLogin@18f65a4]" name="loginToActiTime" duration-ms="55374" started-at="2022-11-14T19:54:23 IST" finished-at="2022-11-14T19:55:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[manager]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToActiTime -->
+      </class> <!-- testNgpack.ActiTimeLogin -->
+    </test> <!-- ChromeTestRunner -->
+    <test name="FirefoxTestRunner" duration-ms="116108" started-at="2022-11-14T19:55:19 IST" finished-at="2022-11-14T19:57:15 IST">
+      <class name="testNgpack.ActiTimeLogin">
+        <test-method status="PASS" signature="loginToActiTime(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testNgpack.ActiTimeLogin@1b5cd00]" name="loginToActiTime" duration-ms="116102" started-at="2022-11-14T19:55:19 IST" finished-at="2022-11-14T19:57:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[manager]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToActiTime -->
+      </class> <!-- testNgpack.ActiTimeLogin -->
+    </test> <!-- FirefoxTestRunner -->
+  </suite> <!-- Suite -->
+</testng-results>
