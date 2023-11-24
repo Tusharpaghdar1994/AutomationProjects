@@ -1,0 +1,106 @@
+package sb;
+
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.google.common.io.Files;
+public class Eclipestint {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		driver.get("https://dev.trdemo.com.au/eclipsetint/");
+		Thread.sleep(2000);
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,2500)");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//a[text()='Commercial'])[2]")).getText();	
+		jse.executeScript("window.scrollBy(0,2500)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Residential']")).click();	
+		jse.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Commercial']")).click();	
+		jse.executeScript("window.scrollBy(0,2500)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Projects']")).click();		
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Blogs']")).click();		
+		jse.executeScript("window.scrollBy(0,2500)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Contact Us']")).click();
+	
+		driver.findElement(By.xpath("//input[@name='fname']")).sendKeys("Marvell");
+		driver.findElement(By.xpath("//input[@name='lname']")).sendKeys("Qa");
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("mail.noreplyqa1gmail.com");
+		
+		WebElement sdropdown = driver.findElement(By.name("your-dropdown"));
+		Select sel = new Select(sdropdown);
+		sel.selectByValue("Insulation Window Film");
+		
+		driver.findElement(By.name("message")).sendKeys("Testing");		
+		driver.findElement(By.xpath("//input[@value='SUBMIT']")).click();
+		Thread.sleep(3000);
+    
+
+		driver.findElement(By.xpath("//img[@class='emoji']")).click();		
+		driver.findElement(By.xpath("(//a[text()='Contact Us'])[2]")).click();	
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Services ']")).click();		
+		driver.findElement(By.id("menu-item-921")).click();
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Services ']")).click();
+		driver.findElement(By.id("menu-item-922")).click();
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Services ']")).click();
+		driver.findElement(By.xpath("//a[text()='Decorative & Frosting Film']")).click();
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Services ']")).click();
+		driver.findElement(By.id("menu-item-923")).click();
+		jse.executeScript("window.scrollBy(0,2000)");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Services ']")).click();
+		driver.findElement(By.id("menu-item-721")).click();
+		jse.executeScript("window.scrollBy(0,1800)");
+		Thread.sleep(2000);
+				
+		driver.findElement(By.xpath("(//a[text()='REQUEST A QUOTE'])[2]")).click();
+		//WebElement target = driver.findElement(By.xpath("(//a[text()='REQUEST A QUOTE'])[2]"));
+		//Actions act = new Actions(driver);
+		//act.doubleClick(target).perform();	
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("qName")).sendKeys("Eldorado");
+		driver.findElement(By.id("qEmail")).sendKeys("mail.noreplyqa1gmail.com");
+		driver.findElement(By.id("qContact")).sendKeys("00000000");
+		driver.findElement(By.id("qAddress1")).sendKeys("112 jogas park");
+		jse.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("button[id='next_btn']")).click();
+	
+		Thread.sleep(5000);
+		driver.close();
+		
+	}
+
+}
